@@ -28,23 +28,52 @@
                                         <rect key="frame" x="0.0" y="0.0" width="683" height="1024"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Spendings" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8qI-EW-lGC">
-                                                <rect key="frame" x="253.5" y="30" width="176.5" height="42"/>
+                                                <rect key="frame" x="258" y="30" width="167.5" height="41"/>
                                                 <fontDescription key="fontDescription" name="NewYorkExtraLarge-Bold" family="New York Extra Large" pointSize="35"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
+                                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Eyz-EP-8lU">
+                                                <rect key="frame" x="0.0" y="91" width="683" height="933"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <color key="sectionIndexBackgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <prototypes>
+                                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="CC5-la-lvQ">
+                                                        <rect key="frame" x="0.0" y="28" width="683" height="51.5"/>
+                                                        <autoresizingMask key="autoresizingMask"/>
+                                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="CC5-la-lvQ" id="akz-Hm-pnU">
+                                                            <rect key="frame" x="0.0" y="0.0" width="683" height="51.5"/>
+                                                            <autoresizingMask key="autoresizingMask"/>
+                                                        </tableViewCellContentView>
+                                                    </tableViewCell>
+                                                </prototypes>
+                                            </tableView>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="R9s-Y3-Hj5" customClass="CustomSelectionButtons" customModule="Fund_Inc_" customModuleProvider="target">
+                                                <rect key="frame" x="30" y="911.5" width="623" height="82.5"/>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="R9s-Y3-Hj5" secondAttribute="height" multiplier="422:56" id="S1Y-98-1qo"/>
+                                                </constraints>
+                                            </view>
                                         </subviews>
                                         <color key="backgroundColor" name="Primary Pink"/>
                                         <constraints>
                                             <constraint firstItem="8qI-EW-lGC" firstAttribute="centerX" secondItem="Nuk-ha-EjH" secondAttribute="centerX" id="13Z-d2-PAh"/>
                                             <constraint firstItem="8qI-EW-lGC" firstAttribute="top" secondItem="Nuk-ha-EjH" secondAttribute="top" constant="30" id="97Z-aH-4fL"/>
+                                            <constraint firstAttribute="bottom" secondItem="Eyz-EP-8lU" secondAttribute="bottom" id="GTA-3p-LOM"/>
+                                            <constraint firstAttribute="trailing" secondItem="R9s-Y3-Hj5" secondAttribute="trailing" constant="30" id="Iqx-qd-ZXo"/>
+                                            <constraint firstAttribute="bottom" secondItem="R9s-Y3-Hj5" secondAttribute="bottom" constant="30" id="W0q-lW-L6L"/>
+                                            <constraint firstItem="Eyz-EP-8lU" firstAttribute="leading" secondItem="Nuk-ha-EjH" secondAttribute="leading" id="f20-yW-v2V"/>
+                                            <constraint firstItem="R9s-Y3-Hj5" firstAttribute="leading" secondItem="Nuk-ha-EjH" secondAttribute="leading" constant="30" id="qkH-av-giC"/>
+                                            <constraint firstItem="Eyz-EP-8lU" firstAttribute="top" secondItem="8qI-EW-lGC" secondAttribute="bottom" constant="20" id="urq-Sb-Czr"/>
+                                            <constraint firstAttribute="trailing" secondItem="Eyz-EP-8lU" secondAttribute="trailing" id="v2z-sJ-h8c"/>
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7kN-CA-FoQ">
                                         <rect key="frame" x="683" y="0.0" width="683" height="1024"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Summary" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WUo-L7-VC3">
-                                                <rect key="frame" x="259.5" y="30" width="164" height="42"/>
+                                                <rect key="frame" x="266.5" y="30" width="150" height="41"/>
                                                 <fontDescription key="fontDescription" name="NewYorkExtraLarge-Bold" family="New York Extra Large" pointSize="35"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>

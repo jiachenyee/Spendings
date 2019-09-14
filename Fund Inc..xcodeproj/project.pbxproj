@@ -55,7 +55,7 @@
 		3228AF5A232C124000FF43D8 /* NewYorkSmall-Semibold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 3228AF2A232C123F00FF43D8 /* NewYorkSmall-Semibold.otf */; };
 		3228AF5B232C124000FF43D8 /* NewYorkSmall-SemiboldItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 3228AF2B232C123F00FF43D8 /* NewYorkSmall-SemiboldItalic.otf */; };
 		3228AF5C232C124000FF43D8 /* NewYorkExtraLarge-MediumItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 3228AF2C232C123F00FF43D8 /* NewYorkExtraLarge-MediumItalic.otf */; };
-		3228AF5F232C133A00FF43D8 /* AddSelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3228AF5E232C133A00FF43D8 /* AddSelectionView.swift */; };
+		3228AF5F232C133A00FF43D8 /* CustomSelectionButtons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3228AF5E232C133A00FF43D8 /* CustomSelectionButtons.swift */; };
 		32E0924F232BED38000F6099 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32E0924E232BED38000F6099 /* AppDelegate.swift */; };
 		32E09251232BED38000F6099 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32E09250232BED38000F6099 /* SceneDelegate.swift */; };
 		32E09253232BED38000F6099 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32E09252232BED38000F6099 /* ViewController.swift */; };
@@ -113,7 +113,7 @@
 		3228AF2A232C123F00FF43D8 /* NewYorkSmall-Semibold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NewYorkSmall-Semibold.otf"; sourceTree = "<group>"; };
 		3228AF2B232C123F00FF43D8 /* NewYorkSmall-SemiboldItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NewYorkSmall-SemiboldItalic.otf"; sourceTree = "<group>"; };
 		3228AF2C232C123F00FF43D8 /* NewYorkExtraLarge-MediumItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NewYorkExtraLarge-MediumItalic.otf"; sourceTree = "<group>"; };
-		3228AF5E232C133A00FF43D8 /* AddSelectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddSelectionView.swift; sourceTree = "<group>"; };
+		3228AF5E232C133A00FF43D8 /* CustomSelectionButtons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSelectionButtons.swift; sourceTree = "<group>"; };
 		32E0924B232BED38000F6099 /* Fund Inc..app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Fund Inc..app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		32E0924E232BED38000F6099 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		32E09250232BED38000F6099 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -193,7 +193,6 @@
 		3228AF60232C134800FF43D8 /* Expenditure VC */ = {
 			isa = PBXGroup;
 			children = (
-				3228AF5E232C133A00FF43D8 /* AddSelectionView.swift */,
 				32E09252232BED38000F6099 /* ViewController.swift */,
 			);
 			path = "Expenditure VC";
@@ -220,6 +219,7 @@
 			children = (
 				32E0924E232BED38000F6099 /* AppDelegate.swift */,
 				32E09250232BED38000F6099 /* SceneDelegate.swift */,
+				3228AF5E232C133A00FF43D8 /* CustomSelectionButtons.swift */,
 				3228AF60232C134800FF43D8 /* Expenditure VC */,
 				32E09254232BED38000F6099 /* Main.storyboard */,
 				3228AF5D232C125100FF43D8 /* New York Typeface */,
@@ -352,7 +352,7 @@
 				32E09253232BED38000F6099 /* ViewController.swift in Sources */,
 				32E0924F232BED38000F6099 /* AppDelegate.swift in Sources */,
 				32E09251232BED38000F6099 /* SceneDelegate.swift in Sources */,
-				3228AF5F232C133A00FF43D8 /* AddSelectionView.swift in Sources */,
+				3228AF5F232C133A00FF43D8 /* CustomSelectionButtons.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
