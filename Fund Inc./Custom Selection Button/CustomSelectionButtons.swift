@@ -10,11 +10,13 @@ import UIKit
 
 @IBDesignable
 class CustomSelectionButtons: UIView {
-
+    
     /*
      Add a StackView containing the 2 buttons
      An open variable to set the arrays
      */
+    
+    // MARK: Actions
     
     // Declaring the actions when one and two are edited and what not
     // Block accepts a sender, which would be self
@@ -29,6 +31,9 @@ class CustomSelectionButtons: UIView {
             setUpTapGestureRecognisers()
         }
     }
+    
+    
+    // MARK: IB Options
     
     // Editing the buttons through storyboard
     // Interface Builder variables
@@ -64,18 +69,24 @@ class CustomSelectionButtons: UIView {
         }
     }
     
+    
+    // MARK: UI Elements
+    
     // Tap Gesture Recognisers
-    var tapGestureRecogniserOne: UITapGestureRecognizer = UITapGestureRecognizer()
-    var tapGestureRecogniserTwo: UITapGestureRecognizer = UITapGestureRecognizer()
+    private var tapGestureRecogniserOne: UITapGestureRecognizer = UITapGestureRecognizer()
+    private var tapGestureRecogniserTwo: UITapGestureRecognizer = UITapGestureRecognizer()
     
     // Getting from NIB
     // because I am a lazy person to programmetically do this
-    lazy var screen: CustomSelectionButtonsView = {
+    lazy private var screen: CustomSelectionButtonsView = {
         let xib = Bundle.main.loadNibNamed("CustomSelectionButtons", owner: self, options: nil)
         let me = xib![0] as! CustomSelectionButtonsView
         
         return me
     }()
+    
+    
+    // MARK: Code Options
     
     // Editing the buttons through code
     // buttonInfo is an array of a tuple of image and button
@@ -119,6 +130,7 @@ class CustomSelectionButtons: UIView {
         self.actionTwo = actionTwo
     }
     
+    // MARK: Init
     override init(frame: CGRect) {
         super.init(frame: frame)
         self.commonInit(frame: frame)
@@ -132,5 +144,45 @@ class CustomSelectionButtons: UIView {
     private func commonInit(frame: CGRect?) {
         setUpSelf()
         setUpTapGestureRecognisers()
+    }
+    
+    
+    private func setUpSelf() {
+        // Setup background
+        self.backgroundColor = .white
+        
+        // Shadows
+        self.layer.shadowColor = UIColor.black.cgColor
+        self.layer.shadowOpacity = 0.22
+        self.layer.shadowOffset = .zero
+        self.layer.shadowRadius = 6
+        
+        // Corner Radius
+        self.layer.cornerRadius = 10
+        
+        self.addSubview(screen)
+    }
+    
+    
+    // MARK: Tap Gesture Recogniser
+    
+    private func setUpTapGestureRecognisers() {
+        // Setting the actions on the tap gesture recogniser
+        tapGestureRecogniserOne.addTarget(self, action: #selector(actionOneClicked))
+        tapGestureRecogniserTwo.addTarget(self, action: #selector(actionTwoClicked))
+        
+        screen.buttonOne.addGestureRecognizer(tapGestureRecogniserOne)
+        screen.buttonTwo.addGestureRecognizer(tapGestureRecogniserTwo)
+    }
+    
+    // Tap gesture recogniser actions
+    // Apparently you cannot just cast a block into selector so here's the method...
+    // Creating a function that just runs the block
+    @objc private func actionOneClicked() {
+        actionOne(self)
+    }
+    
+    @objc private func actionTwoClicked() {
+        actionTwo(self)
     }
 }

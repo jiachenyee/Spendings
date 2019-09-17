@@ -64,7 +64,6 @@
 		32E09256232BED38000F6099 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 32E09254232BED38000F6099 /* Main.storyboard */; };
 		32E09258232BED3B000F6099 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 32E09257232BED3B000F6099 /* Assets.xcassets */; };
 		32E0925B232BED3B000F6099 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 32E09259232BED3B000F6099 /* LaunchScreen.storyboard */; };
-		32EB716B2330C2CC003026AA /* SetUpCustomSelectionButtons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32EB716A2330C2CC003026AA /* SetUpCustomSelectionButtons.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -127,7 +126,6 @@
 		32E09257232BED3B000F6099 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		32E0925A232BED3B000F6099 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		32E0925C232BED3B000F6099 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		32EB716A2330C2CC003026AA /* SetUpCustomSelectionButtons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetUpCustomSelectionButtons.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -208,7 +206,6 @@
 			isa = PBXGroup;
 			children = (
 				3228AF5E232C133A00FF43D8 /* CustomSelectionButtons.swift */,
-				32EB716A2330C2CC003026AA /* SetUpCustomSelectionButtons.swift */,
 				32279130232D313100E089E4 /* CustomSelectionButtonsView.swift */,
 				3227912E232D30BE00E089E4 /* CustomSelectionButtons.xib */,
 			);
@@ -372,7 +369,6 @@
 				32E0924F232BED38000F6099 /* AppDelegate.swift in Sources */,
 				32E09251232BED38000F6099 /* SceneDelegate.swift in Sources */,
 				3228AF5F232C133A00FF43D8 /* CustomSelectionButtons.swift in Sources */,
-				32EB716B2330C2CC003026AA /* SetUpCustomSelectionButtons.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
