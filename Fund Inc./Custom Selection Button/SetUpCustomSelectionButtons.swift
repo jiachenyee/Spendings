@@ -29,10 +29,18 @@ extension CustomSelectionButtons {
     
     public func setUpTapGestureRecognisers() {
         // Setting the actions on the tap gesture recogniser
-        tapGestureRecogniserOne.addTarget(self, action: #selector(getter: actionOne))
-        tapGestureRecogniserTwo.addTarget(self, action: #selector(getter: actionTwo))
+        tapGestureRecogniserOne.addTarget(self, action: #selector(actionOneClicked))
+        tapGestureRecogniserTwo.addTarget(self, action: #selector(actionTwoClicked))
         
         screen.buttonOne.addGestureRecognizer(tapGestureRecogniserOne)
         screen.buttonTwo.addGestureRecognizer(tapGestureRecogniserTwo)
+    }
+    
+    @objc private func actionOneClicked() {
+        actionOne(self)
+    }
+    
+    @objc private func actionTwoClicked() {
+        actionTwo(self)
     }
 }

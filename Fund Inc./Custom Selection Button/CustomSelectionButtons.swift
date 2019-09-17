@@ -71,7 +71,7 @@ class CustomSelectionButtons: UIView {
     // Getting from NIB
     // because I am a lazy person to programmetically do this
     lazy var screen: CustomSelectionButtonsView = {
-        let xib = Bundle.main.loadNibNamed(String(describing: self), owner: self, options: nil)
+        let xib = Bundle.main.loadNibNamed("CustomSelectionButtons", owner: self, options: nil)
         let me = xib![0] as! CustomSelectionButtonsView
         
         return me
@@ -95,7 +95,7 @@ class CustomSelectionButtons: UIView {
             let buttonOneImageView = buttonOneStack.subviews[0] as! UIImageView
             let buttonOneLabel = buttonOneStack.subviews[1] as! UILabel
             
-            let buttonTwoStack = screen.buttonOne.subviews.first as! UIStackView
+            let buttonTwoStack = screen.buttonTwo.subviews.first as! UIStackView
             let buttonTwoImageView = buttonTwoStack.subviews[0] as! UIImageView
             let buttonTwoLabel = buttonTwoStack.subviews[1] as! UILabel
             
@@ -103,6 +103,9 @@ class CustomSelectionButtons: UIView {
             // Adding in the images
             buttonOneImageView.image = buttonInfo[0].image
             buttonTwoImageView.image = buttonInfo[1].image
+            
+            buttonOneImageView.tintColor = self.tintColor
+            buttonTwoImageView.tintColor = self.tintColor
             
             // Adding in the titles
             buttonOneLabel.text = buttonInfo[0].title

@@ -15,6 +15,11 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         
+        customSelectionView.addAction(actionOne: { (actionOne) in
+            print("hello")
+        }) { (actionTwo) in
+            print("hello again")
+        }
     }
 
 
