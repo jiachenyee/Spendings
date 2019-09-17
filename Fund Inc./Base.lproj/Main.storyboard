@@ -54,6 +54,9 @@
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="R9s-Y3-Hj5" secondAttribute="height" multiplier="422:56" id="S1Y-98-1qo"/>
                                                 </constraints>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="titleOne" value="3"/>
+                                                </userDefinedRuntimeAttributes>
                                             </view>
                                         </subviews>
                                         <color key="backgroundColor" name="Primary Pink"/>
@@ -97,6 +100,9 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="customSelectionView" destination="R9s-Y3-Hj5" id="jqk-sL-6nP"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

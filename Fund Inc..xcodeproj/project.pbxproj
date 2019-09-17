@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3227912F232D30BE00E089E4 /* CustomSelectionButtons.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3227912E232D30BE00E089E4 /* CustomSelectionButtons.xib */; };
+		32279131232D313100E089E4 /* CustomSelectionButtonsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32279130232D313100E089E4 /* CustomSelectionButtonsView.swift */; };
 		3228AF2D232C124000FF43D8 /* NewYorkMedium-HeavyItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 3228AEFD232C123700FF43D8 /* NewYorkMedium-HeavyItalic.otf */; };
 		3228AF2E232C124000FF43D8 /* NewYorkLarge-RegularItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 3228AEFE232C123800FF43D8 /* NewYorkLarge-RegularItalic.otf */; };
 		3228AF2F232C124000FF43D8 /* NewYorkSmall-Black.otf in Resources */ = {isa = PBXBuildFile; fileRef = 3228AEFF232C123800FF43D8 /* NewYorkSmall-Black.otf */; };
@@ -62,9 +64,12 @@
 		32E09256232BED38000F6099 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 32E09254232BED38000F6099 /* Main.storyboard */; };
 		32E09258232BED3B000F6099 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 32E09257232BED3B000F6099 /* Assets.xcassets */; };
 		32E0925B232BED3B000F6099 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 32E09259232BED3B000F6099 /* LaunchScreen.storyboard */; };
+		32EB716B2330C2CC003026AA /* SetUpCustomSelectionButtons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32EB716A2330C2CC003026AA /* SetUpCustomSelectionButtons.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3227912E232D30BE00E089E4 /* CustomSelectionButtons.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomSelectionButtons.xib; sourceTree = "<group>"; };
+		32279130232D313100E089E4 /* CustomSelectionButtonsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSelectionButtonsView.swift; sourceTree = "<group>"; };
 		3228AEFD232C123700FF43D8 /* NewYorkMedium-HeavyItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NewYorkMedium-HeavyItalic.otf"; sourceTree = "<group>"; };
 		3228AEFE232C123800FF43D8 /* NewYorkLarge-RegularItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NewYorkLarge-RegularItalic.otf"; sourceTree = "<group>"; };
 		3228AEFF232C123800FF43D8 /* NewYorkSmall-Black.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NewYorkSmall-Black.otf"; sourceTree = "<group>"; };
@@ -122,6 +127,7 @@
 		32E09257232BED3B000F6099 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		32E0925A232BED3B000F6099 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		32E0925C232BED3B000F6099 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		32EB716A2330C2CC003026AA /* SetUpCustomSelectionButtons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetUpCustomSelectionButtons.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -198,6 +204,17 @@
 			path = "Expenditure VC";
 			sourceTree = "<group>";
 		};
+		32B5AF1E232CFF03000DB23F /* Custom Selection Button */ = {
+			isa = PBXGroup;
+			children = (
+				3228AF5E232C133A00FF43D8 /* CustomSelectionButtons.swift */,
+				32EB716A2330C2CC003026AA /* SetUpCustomSelectionButtons.swift */,
+				32279130232D313100E089E4 /* CustomSelectionButtonsView.swift */,
+				3227912E232D30BE00E089E4 /* CustomSelectionButtons.xib */,
+			);
+			path = "Custom Selection Button";
+			sourceTree = "<group>";
+		};
 		32E09242232BED38000F6099 = {
 			isa = PBXGroup;
 			children = (
@@ -219,7 +236,7 @@
 			children = (
 				32E0924E232BED38000F6099 /* AppDelegate.swift */,
 				32E09250232BED38000F6099 /* SceneDelegate.swift */,
-				3228AF5E232C133A00FF43D8 /* CustomSelectionButtons.swift */,
+				32B5AF1E232CFF03000DB23F /* Custom Selection Button */,
 				3228AF60232C134800FF43D8 /* Expenditure VC */,
 				32E09254232BED38000F6099 /* Main.storyboard */,
 				3228AF5D232C125100FF43D8 /* New York Typeface */,
@@ -335,6 +352,7 @@
 				3228AF32232C124000FF43D8 /* NewYorkExtraLarge-Semibold.otf in Resources */,
 				3228AF5B232C124000FF43D8 /* NewYorkSmall-SemiboldItalic.otf in Resources */,
 				3228AF53232C124000FF43D8 /* NewYorkSmall-HeavyItalic.otf in Resources */,
+				3227912F232D30BE00E089E4 /* CustomSelectionButtons.xib in Resources */,
 				3228AF49232C124000FF43D8 /* NewYorkMedium-Regular.otf in Resources */,
 				3228AF58232C124000FF43D8 /* NewYorkLarge-Heavy.otf in Resources */,
 				3228AF57232C124000FF43D8 /* NewYorkSmall-Regular.otf in Resources */,
@@ -349,10 +367,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				32279131232D313100E089E4 /* CustomSelectionButtonsView.swift in Sources */,
 				32E09253232BED38000F6099 /* ViewController.swift in Sources */,
 				32E0924F232BED38000F6099 /* AppDelegate.swift in Sources */,
 				32E09251232BED38000F6099 /* SceneDelegate.swift in Sources */,
 				3228AF5F232C133A00FF43D8 /* CustomSelectionButtons.swift in Sources */,
+				32EB716B2330C2CC003026AA /* SetUpCustomSelectionButtons.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
