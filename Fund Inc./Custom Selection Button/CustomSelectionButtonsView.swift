@@ -12,18 +12,4 @@ class CustomSelectionButtonsView: UIView {
     
     @IBOutlet weak open var buttonOne: UIView!
     @IBOutlet weak open var buttonTwo: UIView!
-    
-    override init(frame: CGRect) {
-        super.init(frame: frame)
-        self.commonInit(frame: frame)
-    }
-    
-    public required init?(coder aDecoder: NSCoder) {
-        super.init(coder: aDecoder)
-        self.commonInit(frame: nil)
-    }
-    
-    private func commonInit(frame: CGRect?) {
-        
-    }
 }

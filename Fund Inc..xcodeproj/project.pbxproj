@@ -58,9 +58,10 @@
 		3228AF5B232C124000FF43D8 /* NewYorkSmall-SemiboldItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 3228AF2B232C123F00FF43D8 /* NewYorkSmall-SemiboldItalic.otf */; };
 		3228AF5C232C124000FF43D8 /* NewYorkExtraLarge-MediumItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 3228AF2C232C123F00FF43D8 /* NewYorkExtraLarge-MediumItalic.otf */; };
 		3228AF5F232C133A00FF43D8 /* CustomSelectionButtons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3228AF5E232C133A00FF43D8 /* CustomSelectionButtons.swift */; };
+		3272622C2331A3100058D1AA /* SpendingsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3272622B2331A3100058D1AA /* SpendingsTableViewCell.swift */; };
 		32E0924F232BED38000F6099 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32E0924E232BED38000F6099 /* AppDelegate.swift */; };
 		32E09251232BED38000F6099 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32E09250232BED38000F6099 /* SceneDelegate.swift */; };
-		32E09253232BED38000F6099 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32E09252232BED38000F6099 /* ViewController.swift */; };
+		32E09253232BED38000F6099 /* ExpenditureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32E09252232BED38000F6099 /* ExpenditureViewController.swift */; };
 		32E09256232BED38000F6099 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 32E09254232BED38000F6099 /* Main.storyboard */; };
 		32E09258232BED3B000F6099 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 32E09257232BED3B000F6099 /* Assets.xcassets */; };
 		32E0925B232BED3B000F6099 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 32E09259232BED3B000F6099 /* LaunchScreen.storyboard */; };
@@ -118,10 +119,11 @@
 		3228AF2B232C123F00FF43D8 /* NewYorkSmall-SemiboldItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NewYorkSmall-SemiboldItalic.otf"; sourceTree = "<group>"; };
 		3228AF2C232C123F00FF43D8 /* NewYorkExtraLarge-MediumItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NewYorkExtraLarge-MediumItalic.otf"; sourceTree = "<group>"; };
 		3228AF5E232C133A00FF43D8 /* CustomSelectionButtons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSelectionButtons.swift; sourceTree = "<group>"; };
+		3272622B2331A3100058D1AA /* SpendingsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpendingsTableViewCell.swift; sourceTree = "<group>"; };
 		32E0924B232BED38000F6099 /* Fund Inc..app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Fund Inc..app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		32E0924E232BED38000F6099 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		32E09250232BED38000F6099 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		32E09252232BED38000F6099 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		32E09252232BED38000F6099 /* ExpenditureViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpenditureViewController.swift; sourceTree = "<group>"; };
 		32E09255232BED38000F6099 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		32E09257232BED3B000F6099 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		32E0925A232BED3B000F6099 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -197,7 +199,8 @@
 		3228AF60232C134800FF43D8 /* Expenditure VC */ = {
 			isa = PBXGroup;
 			children = (
-				32E09252232BED38000F6099 /* ViewController.swift */,
+				32E09252232BED38000F6099 /* ExpenditureViewController.swift */,
+				3272622B2331A3100058D1AA /* SpendingsTableViewCell.swift */,
 			);
 			path = "Expenditure VC";
 			sourceTree = "<group>";
@@ -365,7 +368,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				32279131232D313100E089E4 /* CustomSelectionButtonsView.swift in Sources */,
-				32E09253232BED38000F6099 /* ViewController.swift in Sources */,
+				3272622C2331A3100058D1AA /* SpendingsTableViewCell.swift in Sources */,
+				32E09253232BED38000F6099 /* ExpenditureViewController.swift in Sources */,
 				32E0924F232BED38000F6099 /* AppDelegate.swift in Sources */,
 				32E09251232BED38000F6099 /* SceneDelegate.swift in Sources */,
 				3228AF5F232C133A00FF43D8 /* CustomSelectionButtons.swift in Sources */,

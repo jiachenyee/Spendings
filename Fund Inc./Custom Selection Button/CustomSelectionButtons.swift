@@ -94,8 +94,8 @@ class CustomSelectionButtons: UIView {
     open var buttonInfo: [(image: UIImage, title: String)] = [(UIImage(), "Button 1"), (UIImage(), "Button 2")] {
         didSet {
             // Check if the buttonInfo variable is more than or less than two and provide the handy error message
-            // This is safeguard against myself and my stupidity when working on this code
             
+            // This is safeguard against myself and my stupidity when working on this code
             if buttonInfo.count != 2 {
                 fatalError(buttonInfo.count > 2 ? "Custom Selection Button has too many items" : "Custom Selection Button has too few items")
             }
