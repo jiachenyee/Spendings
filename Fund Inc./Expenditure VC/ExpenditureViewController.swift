@@ -20,6 +20,8 @@ class ExpenditureViewController: UIViewController, UITableViewDataSource, UITabl
         
         customSelectionView.addAction(actionOne: { (actionOne) in
             // Launch OCR
+            // Rui Yang, start work from here
+            // ...
             
         }) { (actionTwo) in
             // Launch Pop-up
