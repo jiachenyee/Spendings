@@ -78,6 +78,7 @@ class PopUpView: UIView {
             self.hide()
         }
         
+        // Set the titles to ""
         screen.cancelOrContinueButton.titleOne = ""
         screen.cancelOrContinueButton.titleTwo = ""
         
@@ -100,6 +101,7 @@ class PopUpView: UIView {
         screen.expenditureSelection.setImage(UIImage(systemName: "arrowtriangle.up.fill"), for: .normal)
         screen.expenditureSelection.tintColor = #colorLiteral(red: 0.5725490196, green: 0.6784313725, blue: 0.6, alpha: 1)
         screen.expenditureSelection.tag = 0
+        screen.storeNameLabel.text = ""
         
         // Run Completion handler
         completion(self)
