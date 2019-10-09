@@ -59,6 +59,7 @@
 		3228AF5C232C124000FF43D8 /* NewYorkExtraLarge-MediumItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 3228AF2C232C123F00FF43D8 /* NewYorkExtraLarge-MediumItalic.otf */; };
 		3228AF5F232C133A00FF43D8 /* CustomSelectionButtons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3228AF5E232C133A00FF43D8 /* CustomSelectionButtons.swift */; };
 		3256DF87234DAF6000CBDE38 /* PopUpViewUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3256DF86234DAF6000CBDE38 /* PopUpViewUI.swift */; };
+		3256DF8B234DD11100CBDE38 /* Expenditure.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3256DF8A234DD11100CBDE38 /* Expenditure.swift */; };
 		3272622C2331A3100058D1AA /* SpendingsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3272622B2331A3100058D1AA /* SpendingsTableViewCell.swift */; };
 		32D0C804234DA15400185EE2 /* PopUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32D0C803234DA15400185EE2 /* PopUpView.swift */; };
 		32D0C806234DABF800185EE2 /* PopUpViewUI.xib in Resources */ = {isa = PBXBuildFile; fileRef = 32D0C805234DABF800185EE2 /* PopUpViewUI.xib */; };
@@ -123,6 +124,7 @@
 		3228AF2C232C123F00FF43D8 /* NewYorkExtraLarge-MediumItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NewYorkExtraLarge-MediumItalic.otf"; sourceTree = "<group>"; };
 		3228AF5E232C133A00FF43D8 /* CustomSelectionButtons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSelectionButtons.swift; sourceTree = "<group>"; };
 		3256DF86234DAF6000CBDE38 /* PopUpViewUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopUpViewUI.swift; sourceTree = "<group>"; };
+		3256DF8A234DD11100CBDE38 /* Expenditure.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Expenditure.swift; sourceTree = "<group>"; };
 		3272622B2331A3100058D1AA /* SpendingsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpendingsTableViewCell.swift; sourceTree = "<group>"; };
 		32D0C803234DA15400185EE2 /* PopUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopUpView.swift; sourceTree = "<group>"; };
 		32D0C805234DABF800185EE2 /* PopUpViewUI.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PopUpViewUI.xib; sourceTree = "<group>"; };
@@ -211,6 +213,14 @@
 			path = "Expenditure VC";
 			sourceTree = "<group>";
 		};
+		3256DF89234DD0E700CBDE38 /* Persistency */ = {
+			isa = PBXGroup;
+			children = (
+				3256DF8A234DD11100CBDE38 /* Expenditure.swift */,
+			);
+			path = Persistency;
+			sourceTree = "<group>";
+		};
 		32B5AF1E232CFF03000DB23F /* Custom Selection Button */ = {
 			isa = PBXGroup;
 			children = (
@@ -259,6 +269,7 @@
 			children = (
 				32E0924E232BED38000F6099 /* AppDelegate.swift */,
 				32E09250232BED38000F6099 /* SceneDelegate.swift */,
+				3256DF89234DD0E700CBDE38 /* Persistency */,
 				32D0C802234DA13C00185EE2 /* Custom Segmented Control */,
 				32D0C801234DA11600185EE2 /* Pop Up View */,
 				32B5AF1E232CFF03000DB23F /* Custom Selection Button */,
@@ -395,6 +406,7 @@
 			files = (
 				32D0C804234DA15400185EE2 /* PopUpView.swift in Sources */,
 				3256DF87234DAF6000CBDE38 /* PopUpViewUI.swift in Sources */,
+				3256DF8B234DD11100CBDE38 /* Expenditure.swift in Sources */,
 				32279131232D313100E089E4 /* CustomSelectionButtonsView.swift in Sources */,
 				3272622C2331A3100058D1AA /* SpendingsTableViewCell.swift in Sources */,
 				32E09253232BED38000F6099 /* ExpenditureViewController.swift in Sources */,
