@@ -10,6 +10,10 @@ import UIKit
 
 class CustomSelectionButtonsView: UIView {
     
+    @IBOutlet weak var stack: UIStackView!
+    @IBOutlet weak open var seperator: UIView!
+    @IBOutlet weak open var buttonTwoView: UIView!
+    @IBOutlet weak open var buttonOneView: UIView!
     @IBOutlet weak open var buttonOne: UIView!
     @IBOutlet weak open var buttonTwo: UIView!
 }

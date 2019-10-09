@@ -130,6 +130,13 @@ class CustomSelectionButtons: UIView {
         self.actionTwo = actionTwo
     }
     
+    open func setColors(buttonOne: UIColor, buttonTwo: UIColor) {
+        screen.buttonOne.backgroundColor = buttonOne
+        screen.buttonTwo.backgroundColor = buttonTwo
+        
+        screen.seperator.isHidden = true
+    }
+    
     // MARK: Init
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -147,6 +154,17 @@ class CustomSelectionButtons: UIView {
     }
     
     
+    override func tintColorDidChange() {
+        let buttonOneStack = screen.buttonOne.subviews.first as! UIStackView
+        let buttonTwoStack = screen.buttonTwo.subviews.first as! UIStackView
+        
+        let buttonOneImageView = buttonOneStack.subviews[0] as! UIImageView
+        let buttonTwoImageView = buttonTwoStack.subviews[0] as! UIImageView
+        
+        buttonOneImageView.tintColor = self.tintColor
+        buttonTwoImageView.tintColor = self.tintColor
+    }
+    
     private func setUpSelf() {
         // Setup background
         self.backgroundColor = .white
@@ -159,6 +177,12 @@ class CustomSelectionButtons: UIView {
         
         // Corner Radius
         self.layer.cornerRadius = 10
+        screen.stack.layer.cornerRadius = 10
+        screen.stack.clipsToBounds = true
+        
+        screen.layer.cornerRadius = 10
+        screen.clipsToBounds = true
+        
         
         self.addSubview(screen)
     }

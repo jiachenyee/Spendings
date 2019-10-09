@@ -10,20 +10,25 @@ import UIKit
 
 class ExpenditureViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
+    @IBOutlet weak var popUpView: PopUpView!
     @IBOutlet weak var customSelectionView: CustomSelectionButtons!
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         
         customSelectionView.addAction(actionOne: { (actionOne) in
-            print("hello")
+            // Launch OCR
+            
         }) { (actionTwo) in
-            print("hello again")
+            // Launch Pop-up
+            self.popUpView.isHidden = false
+            
         }
+        popFrame = popUpView.frame
+        customSelectionView.tintColor = .black
     }
     
     // MARK: TableView Datasource
-    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 5
     }
@@ -38,7 +43,7 @@ class ExpenditureViewController: UIViewController, UITableViewDataSource, UITabl
         
         cell.iconImageView.image = UIImage(systemName: "desktopcomputer")
         cell.curvedImageViewView.backgroundColor = #colorLiteral(red: 0.6431372549, green: 0.7647058824, blue: 0.6980392157, alpha: 1)
-        cell.titleLabel.text = "Apple Store (Jewel)"
+        cell.titleLabel.text = "Store"
         cell.costAndTimeLabel.text = "$1,000 | Today"
         cell.costAndTimeLabel.textColor = #colorLiteral(red: 0.8588235294, green: 0.3294117647, blue: 0.3803921569, alpha: 1)
         cell.arrowImageView.image = UIImage(systemName: "arrowtriangle.down.fill")
