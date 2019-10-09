@@ -25,16 +25,19 @@
                     <rect key="frame" x="171" y="142" width="341.5" height="60"/>
                     <subviews>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SIU-ji-ZV3">
-                            <rect key="frame" x="0.0" y="0.0" width="60" height="60"/>
+                            <rect key="frame" x="15" y="15" width="31" height="30"/>
                             <constraints>
                                 <constraint firstAttribute="width" secondItem="SIU-ji-ZV3" secondAttribute="height" multiplier="1:1" id="kLY-8T-9lJ"/>
                             </constraints>
                             <color key="tintColor" name="Special-Green"/>
-                            <state key="normal" image="triangle.fill" catalog="system">
+                            <state key="normal" image="arrowtriangle.up.fill" catalog="system">
                                 <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="font" scale="large">
                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
                                 </preferredSymbolConfiguration>
                             </state>
+                            <connections>
+                                <action selector="changedSpendings:" destination="iN0-l3-epB" eventType="touchUpInside" id="duU-JX-GYx"/>
+                            </connections>
                         </button>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="$" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O2y-Sx-0qZ">
                             <rect key="frame" x="0.0" y="0.0" width="36" height="66"/>
@@ -91,8 +94,8 @@
         </view>
     </objects>
     <resources>
+        <image name="arrowtriangle.up.fill" catalog="system" width="64" height="60"/>
         <image name="checkmark" catalog="system" width="64" height="56"/>
-        <image name="triangle.fill" catalog="system" width="64" height="56"/>
         <image name="xmark" catalog="system" width="64" height="56"/>
         <namedColor name="Special-Green">
             <color red="0.5725490196078431" green="0.67843137254901964" blue="0.59999999999999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

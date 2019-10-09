@@ -25,4 +25,15 @@ class PopUpViewUI: UIView {
         
     }
     
+    @IBAction func changedSpendings(_ sender: UIButton) {
+        if sender.tag == 0 {
+            sender.setImage(UIImage(systemName: "arrowtriangle.down.fill"), for: .normal)
+            sender.tintColor = #colorLiteral(red: 0.8588235294, green: 0.3294117647, blue: 0.3803921569, alpha: 1)
+            sender.tag = 1
+        } else {
+            sender.setImage(UIImage(systemName: "arrowtriangle.up.fill"), for: .normal)
+            sender.tintColor = #colorLiteral(red: 0.5725490196, green: 0.6784313725, blue: 0.6, alpha: 1)
+            sender.tag = 0
+        }
+    }
 }

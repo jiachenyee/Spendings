@@ -65,13 +65,21 @@ class PopUpView: UIView {
     }
     
     func hide() {
+        // Kill keyboard
+        self.endEditing(true)
+        
         // Animate an exit
-        // Reset all values
         UIView.animate(withDuration: animationDuration, animations: {
             self.alpha = 0
         }) { (_) in
             self.isHidden = true
         }
+        
+        // Reset all values
+        screen.cashInput.text = ""
+        screen.expenditureSelection.setImage(UIImage(systemName: "arrowtriangle.up.fill"), for: .normal)
+        screen.expenditureSelection.tintColor = #colorLiteral(red: 0.5725490196, green: 0.6784313725, blue: 0.6, alpha: 1)
+        screen.expenditureSelection.tag = 0
     }
     
     // when isHidden value gets changed
