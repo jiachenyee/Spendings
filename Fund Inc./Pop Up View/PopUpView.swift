@@ -61,15 +61,19 @@ class PopUpView: UIView {
             var previousData = ExpenditureClass.loadFromFile() ?? []
             
             // Adding the new data into the file
-            previousData.append(ExpenditureClass(amount: Double(self.screen.cashInput.text!)!, isSpending: {
-                if self.screen.expenditureSelection.tag == 1{
-                    return true
-                }
-                return false
-            }(), store: "", inputDate: Date()))
+            // Check if there is data first
             
-            // Writing back to file
-            ExpenditureClass.saveToFile(expenditures: previousData)
+            if self.screen.cashInput.text != nil && self.screen.cashInput.text != "" {
+                previousData.append(ExpenditureClass(amount: Double(self.screen.cashInput.text!)!, isSpending: {
+                    if self.screen.expenditureSelection.tag == 1{
+                        return true
+                    }
+                    return false
+                }(), store: self.screen.storeNameLabel.text ?? "", inputDate: Date()))
+                
+                // Writing back to file
+                ExpenditureClass.saveToFile(expenditures: previousData)
+            }
             
             self.hide()
         }

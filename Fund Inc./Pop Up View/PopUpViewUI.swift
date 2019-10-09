@@ -13,6 +13,7 @@ class PopUpViewUI: UIView {
     @IBOutlet weak var expenditureSelection: UIButton!
     @IBOutlet weak var cashInput: UITextField!
     @IBOutlet weak var cancelOrContinueButton: CustomSelectionButtons!
+    @IBOutlet weak var storeNameLabel: UITextField!
     
     // Data Validation
     @IBAction func textChanged(_ sender: Any) {
