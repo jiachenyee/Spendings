@@ -21,7 +21,7 @@
                         <constraint firstAttribute="height" constant="50" id="4X3-Mc-Sz9"/>
                     </constraints>
                 </view>
-                <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="sdU-E7-jt6">
+                <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sdU-E7-jt6">
                     <rect key="frame" x="171" y="142" width="341.5" height="60"/>
                     <subviews>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SIU-ji-ZV3">
@@ -36,10 +36,19 @@
                                 </preferredSymbolConfiguration>
                             </state>
                         </button>
-                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="$1000" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1CN-mv-sui">
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="$" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O2y-Sx-0qZ">
+                            <rect key="frame" x="0.0" y="0.0" width="36" height="66"/>
+                            <fontDescription key="fontDescription" type="boldSystem" pointSize="55"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="1000" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1CN-mv-sui">
                             <rect key="frame" x="80" y="0.0" width="261.5" height="60"/>
                             <fontDescription key="fontDescription" type="boldSystem" pointSize="50"/>
-                            <textInputTraits key="textInputTraits"/>
+                            <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                            <connections>
+                                <action selector="textChanged:" destination="iN0-l3-epB" eventType="editingChanged" id="Pa5-fw-2t7"/>
+                            </connections>
                         </textField>
                     </subviews>
                 </stackView>

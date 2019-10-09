@@ -14,4 +14,15 @@ class PopUpViewUI: UIView {
     @IBOutlet weak var cashInput: UITextField!
     @IBOutlet weak var cancelOrContinueButton: CustomSelectionButtons!
     
+    // Data Validation
+    @IBAction func textChanged(_ sender: Any) {
+        if cashInput.text != nil && !cashInput.text!.isEmpty {
+            if cashInput.text!.last!.isNumber {
+            } else {
+                cashInput.text?.removeLast()
+            }
+        }
+        
+    }
+    
 }
