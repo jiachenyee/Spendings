@@ -199,6 +199,7 @@
                     <connections>
                         <outlet property="customSelectionView" destination="R9s-Y3-Hj5" id="jqk-sL-6nP"/>
                         <outlet property="popUpView" destination="Wgc-Cg-ryt" id="TnP-xu-Fen"/>
+                        <outlet property="tableView" destination="Eyz-EP-8lU" id="vXV-NJ-6Df"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

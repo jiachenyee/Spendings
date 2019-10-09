@@ -18,11 +18,13 @@ class ExpenditureClass: Codable {
     var amount: Double
     var isSpending: Bool
     var store: String
+    var inputDate: Date
     
-    init(amount: Double, isSpending: Bool, store: String) {
+    init(amount: Double, isSpending: Bool, store: String, inputDate: Date) {
         self.amount = amount
         self.isSpending = isSpending
         self.store = store
+        self.inputDate = inputDate
     }
     
     static func getArchiveURL() -> URL {
@@ -46,5 +48,4 @@ class ExpenditureClass: Codable {
         
         return decodedExpenditure
     }
-    
 }

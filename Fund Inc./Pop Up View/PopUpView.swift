@@ -14,8 +14,9 @@ var popFrame = CGRect()
 class PopUpView: UIView {
     
     // MARK: Open Variables
-    var placeholder = ""
-    var animationDuration: TimeInterval = 0.3
+    open var placeholder = ""
+    open var animationDuration: TimeInterval = 0.3
+    open var completion: (_ sender: PopUpView) -> Void = {_ in }
     
     // MARK: Init
     override init(frame: CGRect) {
@@ -43,18 +44,33 @@ class PopUpView: UIView {
         
         // Add XIB
         self.addSubview(screen)
-        
-        print(UIScreen.main.bounds.width)
-        
+                
         screen.frame = CGRect(x: 0, y: 0, width: screen.frame.width, height: screen.frame.height)
         
         screen.cancelOrContinueButton.setColors(buttonOne: #colorLiteral(red: 0.8588235294, green: 0.3294117647, blue: 0.3803921569, alpha: 1), buttonTwo: #colorLiteral(red: 0.5725490196, green: 0.6784313725, blue: 0.6, alpha: 1))
         // Edit selection buttons
         screen.cancelOrContinueButton.addAction(actionOne: { (actionOne) in
-            // Save and Dismiss
-            self.hide()
-        }) { (actionTwo) in
             // Dismiss
+            self.hide()
+            
+        }) { (actionTwo) in
+            // Save and Dismiss
+            // Saving data
+            
+            // Loading from the file
+            var previousData = ExpenditureClass.loadFromFile() ?? []
+            
+            // Adding the new data into the file
+            previousData.append(ExpenditureClass(amount: Double(self.screen.cashInput.text!)!, isSpending: {
+                if self.screen.expenditureSelection.tag == 1{
+                    return true
+                }
+                return false
+            }(), store: "", inputDate: Date()))
+            
+            // Writing back to file
+            ExpenditureClass.saveToFile(expenditures: previousData)
+            
             self.hide()
         }
         
@@ -80,6 +96,9 @@ class PopUpView: UIView {
         screen.expenditureSelection.setImage(UIImage(systemName: "arrowtriangle.up.fill"), for: .normal)
         screen.expenditureSelection.tintColor = #colorLiteral(red: 0.5725490196, green: 0.6784313725, blue: 0.6, alpha: 1)
         screen.expenditureSelection.tag = 0
+        
+        // Run Completion handler
+        completion(self)
     }
     
     // when isHidden value gets changed

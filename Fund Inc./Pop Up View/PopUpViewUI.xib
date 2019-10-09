@@ -22,10 +22,10 @@
                     </constraints>
                 </view>
                 <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sdU-E7-jt6">
-                    <rect key="frame" x="171" y="142" width="341.5" height="60"/>
+                    <rect key="frame" x="171" y="142" width="341.5" height="66"/>
                     <subviews>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SIU-ji-ZV3">
-                            <rect key="frame" x="15" y="15" width="31" height="30"/>
+                            <rect key="frame" x="0.0" y="0.0" width="66" height="66"/>
                             <constraints>
                                 <constraint firstAttribute="width" secondItem="SIU-ji-ZV3" secondAttribute="height" multiplier="1:1" id="kLY-8T-9lJ"/>
                             </constraints>
@@ -39,14 +39,14 @@
                                 <action selector="changedSpendings:" destination="iN0-l3-epB" eventType="touchUpInside" id="duU-JX-GYx"/>
                             </connections>
                         </button>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="$" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O2y-Sx-0qZ">
-                            <rect key="frame" x="0.0" y="0.0" width="36" height="66"/>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O2y-Sx-0qZ">
+                            <rect key="frame" x="66" y="0.0" width="36" height="66"/>
                             <fontDescription key="fontDescription" type="boldSystem" pointSize="55"/>
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
                         </label>
                         <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="1000" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1CN-mv-sui">
-                            <rect key="frame" x="80" y="0.0" width="261.5" height="60"/>
+                            <rect key="frame" x="102" y="0.0" width="239.5" height="66"/>
                             <fontDescription key="fontDescription" type="boldSystem" pointSize="50"/>
                             <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                             <connections>

@@ -17,12 +17,11 @@ class PopUpViewUI: UIView {
     // Data Validation
     @IBAction func textChanged(_ sender: Any) {
         if cashInput.text != nil && !cashInput.text!.isEmpty {
-            if cashInput.text!.last!.isNumber {
+            if cashInput.text!.last!.isNumber || cashInput.text!.last! == "." {
             } else {
                 cashInput.text?.removeLast()
             }
         }
-        
     }
     
     @IBAction func changedSpendings(_ sender: UIButton) {
