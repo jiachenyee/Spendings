@@ -12,6 +12,7 @@ struct Expenditure: Codable {
     var amount: Double
     var isSpending: Bool
     var store: String
+    var date: Date
 }
 
 class ExpenditureClass: Codable {
