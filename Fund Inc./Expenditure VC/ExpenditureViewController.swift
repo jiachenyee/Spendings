@@ -7,21 +7,27 @@
 //
 
 import UIKit
+import Vision
+import VisionKit
 
-class ExpenditureViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+class ExpenditureViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, VNDocumentCameraViewControllerDelegate {
 
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var popUpView: PopUpView!
     @IBOutlet weak var customSelectionView: CustomSelectionButtons!
     
+    var textRecognitionRequest = VNRecognizeTextRequest(completionHandler: nil)
+    private let textRecognitionWorkQueue = DispatchQueue(label: "TextRecognitionQueue", qos: .userInitiated, attributes: [], autoreleaseFrequency: .workItem)
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
         
         customSelectionView.addAction(actionOne: { (actionOne) in
             // Launch OCR
-            // Rui Yang, start work from here
-            // ...
+            let scannerViewController = VNDocumentCameraViewController()
+            scannerViewController.delegate = self
+            self.present(scannerViewController, animated: true)
+            print("Scanner Launched")
             
         }) { (actionTwo) in
             // Launch Pop-up
@@ -34,6 +40,7 @@ class ExpenditureViewController: UIViewController, UITableViewDataSource, UITabl
         
         popFrame = popUpView.frame
         customSelectionView.tintColor = .black
+        setupVision()
     }
     
     // MARK: TableView Datasource
@@ -83,5 +90,89 @@ class ExpenditureViewController: UIViewController, UITableViewDataSource, UITabl
         return cell
     }
     
+    // MARK: - Start OCR Stuff
+    private func setupVision() {
+        textRecognitionRequest = VNRecognizeTextRequest { (request, error) in
+            guard let observations = request.results as? [VNRecognizedTextObservation] else { return }
+            var detectedText = ""
+            for observation in observations {
+                guard let topCandidate = observation.topCandidates(1).first else { return }
+
+                detectedText += topCandidate.string
+                detectedText += "\n"
+            }
+            self.textRecognitionRequest.recognitionLevel = .accurate
+            print(detectedText)
+        }
+        // Improving on the results of the scanned text
+        textRecognitionRequest.usesLanguageCorrection = true
+        textRecognitionRequest.recognitionLevel = .accurate
+    }
+    
+    // MARK: - Setting the Scanning View Controllers
+    
+    func documentCameraViewController(_ controller: VNDocumentCameraViewController, didFinishWith scan: VNDocumentCameraScan) {
+        // Make sure the user scanned at least one page
+        guard scan.pageCount >= 1 else {
+            // If the user does not have any pages scanned, then dismiss the controller
+            controller.dismiss(animated: true)
+            return
+        }
+        
+        // Processing of photo to work around a VisionKit Bug
+        let originalImage = scan.imageOfPage(at: 0)
+        let fixedImage = reloadedImage(originalImage)
+        
+        // After completing the scan, dismiss the controller
+        controller.dismiss(animated: true)
+        
+        // Process the image
+        recogniseTextInImage(fixedImage)
+    }
+    
+    func documentCameraViewController(_ controller: VNDocumentCameraViewController, didFailWithError error: Error) {
+        // The VNDocumentCameraViewController failed with an error.
+        // Print the error so that we would know what went wrong
+        print(error)
+        
+        // Since there's an error, dismiss controller and get user to try again
+        controller.dismiss(animated: true)
+        
+        // Inform the user that there was an error occured
+        let alert = UIAlertController(title: "Error", message: "There was an error with the scanning of the receipt. Please try again!", preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: NSLocalizedString("Ok", comment: "Default Action"), style: .default, handler: nil))
+        present(alert, animated: true)
+
+    }
+    
+     func documentCameraViewControllerDidCancel(_ controller: VNDocumentCameraViewController) {
+         // If the user cancels the scan, you need to dismiss the controller
+         controller.dismiss(animated: true)
+     }
+    
+    // MARK: - Scan Handling
+    /// Recognizes and displays the text from the image
+    /// - Parameter image: `UIImage` to process and perform OCR on
+    private func recogniseTextInImage(_ image: UIImage) {
+        guard let cgImage = image.cgImage else { return }
+        textRecognitionWorkQueue.async {
+            let requestHandler = VNImageRequestHandler(cgImage: cgImage, options: [:])
+            do {
+                try requestHandler.perform([self.textRecognitionRequest])
+            } catch {
+                print(error)
+            }
+        }
+    }
+    // MARK: - Image Loading Workaround
+    
+    func reloadedImage(_ originalImage: UIImage) -> UIImage {
+        guard let imageData = originalImage.jpegData(compressionQuality: 1),
+            let reloadedImage = UIImage(data: imageData) else {
+                return originalImage
+        }
+        return reloadedImage
+    }
+
 }
 
