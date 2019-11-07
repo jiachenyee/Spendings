@@ -86,11 +86,10 @@ class ExpenditureViewController: UIViewController, UITableViewDataSource, UITabl
             cell.arrowImageView.tintColor = #colorLiteral(red: 0.5725490196, green: 0.6784313725, blue: 0.6, alpha: 1)
         }
         
-        
         return cell
     }
     
-    // MARK: - Start OCR Stuff
+    // MARK: - Optical Character Recognition
     private func setupVision() {
         textRecognitionRequest = VNRecognizeTextRequest { (request, error) in
             guard let observations = request.results as? [VNRecognizedTextObservation] else { return }

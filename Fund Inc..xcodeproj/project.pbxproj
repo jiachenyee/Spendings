@@ -254,13 +254,6 @@
 			path = "Pop Up View";
 			sourceTree = "<group>";
 		};
-		32D0C802234DA13C00185EE2 /* Custom Segmented Control */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = "Custom Segmented Control";
-			sourceTree = "<group>";
-		};
 		32E09242232BED38000F6099 = {
 			isa = PBXGroup;
 			children = (
@@ -283,7 +276,6 @@
 				32E0924E232BED38000F6099 /* AppDelegate.swift */,
 				32E09250232BED38000F6099 /* SceneDelegate.swift */,
 				3256DF89234DD0E700CBDE38 /* Persistency */,
-				32D0C802234DA13C00185EE2 /* Custom Segmented Control */,
 				32D0C801234DA11600185EE2 /* Pop Up View */,
 				32B5AF1E232CFF03000DB23F /* Custom Selection Button */,
 				3228AF60232C134800FF43D8 /* Expenditure VC */,
