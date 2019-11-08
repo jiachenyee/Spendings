@@ -7,13 +7,7 @@
 //
 
 import Foundation
-
-struct Expenditure: Codable {
-    var amount: Double
-    var isSpending: Bool
-    var store: String
-    var date: Date
-}
+import UIKit
 
 class ExpenditureClass: Codable {
     var amount: Double
@@ -48,5 +42,21 @@ class ExpenditureClass: Codable {
         guard let decodedExpenditure = try? propertyListDecoder.decode(Array<ExpenditureClass>.self, from: retrievedExpenditureData) else { return nil }
         
         return decodedExpenditure
+    }
+    
+    static func getIconAndColor(_ store :String) -> (img: UIImage, color: UIColor) {
+        if store.lowercased().contains("steam") {
+            return (img: UIImage(systemName: "gamecontroller.fill")!, color: #colorLiteral(red: 0.7882352941, green: 0.5490196078, blue: 0.6549019608, alpha: 1))
+        } else if store.lowercased().contains("grab") {
+            return (img: UIImage(systemName: "car.fill")!, color: #colorLiteral(red: 0.6431372549, green: 0.7647058824, blue: 0.6980392157, alpha: 1))
+        } else if store.lowercased().contains("apple") {
+            return (img: UIImage(systemName: "desktopcomputer")!, color: #colorLiteral(red: 0.8352941176, green: 0.6274509804, blue: 0.1294117647, alpha: 1))
+        } else if store.lowercased().contains("amazon") {
+            return (img: UIImage(systemName: "cube.box.fill")!, color: #colorLiteral(red: 0.9725490196, green: 0.4392156863, blue: 0.3764705882, alpha: 1))
+        } else if store.lowercased().contains("hardware") || store.lowercased().contains("construction") {
+            return (img: UIImage(systemName: "wrench.fill")!, color: #colorLiteral(red: 0.8352941176, green: 0.6274509804, blue: 0.1294117647, alpha: 1))
+        }
+        
+        return (img: UIImage(systemName: "dollarsign.circle.fill")!, color: #colorLiteral(red: 0.7882352941, green: 0.5490196078, blue: 0.6549019608, alpha: 1))
     }
 }

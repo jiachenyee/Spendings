@@ -28,13 +28,13 @@
                                         <rect key="frame" x="0.0" y="0.0" width="683" height="1024"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Spendings" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8qI-EW-lGC">
-                                                <rect key="frame" x="253.5" y="30" width="176.5" height="42"/>
+                                                <rect key="frame" x="258" y="30" width="167.5" height="41"/>
                                                 <fontDescription key="fontDescription" name="NewYorkExtraLarge-Bold" family="New York Extra Large" pointSize="35"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="90" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Eyz-EP-8lU">
-                                                <rect key="frame" x="0.0" y="92" width="683" height="932"/>
+                                                <rect key="frame" x="0.0" y="91" width="683" height="933"/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <color key="sectionIndexBackgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <prototypes>
@@ -154,15 +154,15 @@
                                         <rect key="frame" x="683" y="0.0" width="683" height="1024"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Summary" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WUo-L7-VC3">
-                                                <rect key="frame" x="259.5" y="30" width="164" height="42"/>
+                                                <rect key="frame" x="266.5" y="30" width="150" height="41"/>
                                                 <fontDescription key="fontDescription" name="NewYorkExtraLarge-Bold" family="New York Extra Large" pointSize="35"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ELr-al-74R">
-                                                <rect key="frame" x="0.0" y="92" width="683" height="932"/>
+                                                <rect key="frame" x="0.0" y="91" width="683" height="933"/>
                                                 <connections>
-                                                    <segue destination="g0c-yF-utN" kind="embed" id="sC4-TR-oQV"/>
+                                                    <segue destination="g0c-yF-utN" kind="embed" identifier="ohno" id="sC4-TR-oQV"/>
                                                 </connections>
                                             </containerView>
                                         </subviews>
@@ -201,6 +201,7 @@
                     <connections>
                         <outlet property="customSelectionView" destination="R9s-Y3-Hj5" id="jqk-sL-6nP"/>
                         <outlet property="popUpView" destination="Wgc-Cg-ryt" id="TnP-xu-Fen"/>
+                        <outlet property="summaryContainerView" destination="ELr-al-74R" id="y4u-ao-zk9"/>
                         <outlet property="tableView" destination="Eyz-EP-8lU" id="vXV-NJ-6Df"/>
                     </connections>
                 </viewController>
