@@ -61,6 +61,8 @@
 		3256DF87234DAF6000CBDE38 /* PopUpViewUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3256DF86234DAF6000CBDE38 /* PopUpViewUI.swift */; };
 		3256DF8B234DD11100CBDE38 /* Expenditure.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3256DF8A234DD11100CBDE38 /* Expenditure.swift */; };
 		3272622C2331A3100058D1AA /* SpendingsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3272622B2331A3100058D1AA /* SpendingsTableViewCell.swift */; };
+		327CBBD623631E6400778914 /* Summary.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 327CBBD523631E6400778914 /* Summary.storyboard */; };
+		327CBBD92363246100778914 /* SummaryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 327CBBD82363246100778914 /* SummaryViewController.swift */; };
 		32D0C804234DA15400185EE2 /* PopUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32D0C803234DA15400185EE2 /* PopUpView.swift */; };
 		32D0C806234DABF800185EE2 /* PopUpViewUI.xib in Resources */ = {isa = PBXBuildFile; fileRef = 32D0C805234DABF800185EE2 /* PopUpViewUI.xib */; };
 		32E0924F232BED38000F6099 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32E0924E232BED38000F6099 /* AppDelegate.swift */; };
@@ -126,6 +128,8 @@
 		3256DF86234DAF6000CBDE38 /* PopUpViewUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopUpViewUI.swift; sourceTree = "<group>"; };
 		3256DF8A234DD11100CBDE38 /* Expenditure.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Expenditure.swift; sourceTree = "<group>"; };
 		3272622B2331A3100058D1AA /* SpendingsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpendingsTableViewCell.swift; sourceTree = "<group>"; };
+		327CBBD523631E6400778914 /* Summary.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Summary.storyboard; sourceTree = "<group>"; };
+		327CBBD82363246100778914 /* SummaryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SummaryViewController.swift; sourceTree = "<group>"; };
 		32D0C803234DA15400185EE2 /* PopUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopUpView.swift; sourceTree = "<group>"; };
 		32D0C805234DABF800185EE2 /* PopUpViewUI.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PopUpViewUI.xib; sourceTree = "<group>"; };
 		32E0924B232BED38000F6099 /* Fund Inc..app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Fund Inc..app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -221,6 +225,15 @@
 			path = Persistency;
 			sourceTree = "<group>";
 		};
+		327CBBD72363244700778914 /* Summary */ = {
+			isa = PBXGroup;
+			children = (
+				327CBBD523631E6400778914 /* Summary.storyboard */,
+				327CBBD82363246100778914 /* SummaryViewController.swift */,
+			);
+			path = Summary;
+			sourceTree = "<group>";
+		};
 		32B5AF1E232CFF03000DB23F /* Custom Selection Button */ = {
 			isa = PBXGroup;
 			children = (
@@ -239,13 +252,6 @@
 				3256DF86234DAF6000CBDE38 /* PopUpViewUI.swift */,
 			);
 			path = "Pop Up View";
-			sourceTree = "<group>";
-		};
-		32D0C802234DA13C00185EE2 /* Custom Segmented Control */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = "Custom Segmented Control";
 			sourceTree = "<group>";
 		};
 		32E09242232BED38000F6099 = {
@@ -270,11 +276,11 @@
 				32E0924E232BED38000F6099 /* AppDelegate.swift */,
 				32E09250232BED38000F6099 /* SceneDelegate.swift */,
 				3256DF89234DD0E700CBDE38 /* Persistency */,
-				32D0C802234DA13C00185EE2 /* Custom Segmented Control */,
 				32D0C801234DA11600185EE2 /* Pop Up View */,
 				32B5AF1E232CFF03000DB23F /* Custom Selection Button */,
 				3228AF60232C134800FF43D8 /* Expenditure VC */,
 				32E09254232BED38000F6099 /* Main.storyboard */,
+				327CBBD72363244700778914 /* Summary */,
 				3228AF5D232C125100FF43D8 /* New York Typeface */,
 				32E09257232BED3B000F6099 /* Assets.xcassets */,
 				32E09259232BED3B000F6099 /* LaunchScreen.storyboard */,
@@ -371,6 +377,7 @@
 				3228AF33232C124000FF43D8 /* NewYorkExtraLarge-Regular.otf in Resources */,
 				3228AF45232C124000FF43D8 /* NewYorkExtraLarge-Medium.otf in Resources */,
 				32E09258232BED3B000F6099 /* Assets.xcassets in Resources */,
+				327CBBD623631E6400778914 /* Summary.storyboard in Resources */,
 				3228AF51232C124000FF43D8 /* NewYorkSmall-Bold.otf in Resources */,
 				3228AF37232C124000FF43D8 /* NewYorkMedium-Heavy.otf in Resources */,
 				3228AF3C232C124000FF43D8 /* NewYorkLarge-Regular.otf in Resources */,
@@ -413,6 +420,7 @@
 				32E0924F232BED38000F6099 /* AppDelegate.swift in Sources */,
 				32E09251232BED38000F6099 /* SceneDelegate.swift in Sources */,
 				3228AF5F232C133A00FF43D8 /* CustomSelectionButtons.swift in Sources */,
+				327CBBD92363246100778914 /* SummaryViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
