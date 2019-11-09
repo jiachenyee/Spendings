@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  ExpenditureViewController.swift
 //  Fund Inc.
 //
 //  Created by JiaChen(: on 13/9/19.
@@ -15,6 +15,7 @@ class ExpenditureViewController: UIViewController, UITableViewDataSource, UITabl
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var popUpView: PopUpView!
     @IBOutlet weak var customSelectionView: CustomSelectionButtons!
+    @IBOutlet weak var summaryContainerView: UIView!
     
     var textRecognitionRequest = VNRecognizeTextRequest(completionHandler: nil)
     private let textRecognitionWorkQueue = DispatchQueue(label: "TextRecognitionQueue", qos: .userInitiated, attributes: [], autoreleaseFrequency: .workItem)
@@ -59,8 +60,8 @@ class ExpenditureViewController: UIViewController, UITableViewDataSource, UITabl
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "spendings", for: indexPath) as! SpendingsTableViewCell
         
-        cell.iconImageView.image = UIImage(systemName: "desktopcomputer")
-        cell.curvedImageViewView.backgroundColor = #colorLiteral(red: 0.6431372549, green: 0.7647058824, blue: 0.6980392157, alpha: 1)
+        cell.iconImageView.image = ExpenditureClass.getIconAndColor(data[indexPath.row].store).img
+        cell.curvedImageViewView.backgroundColor = ExpenditureClass.getIconAndColor(data[indexPath.row].store).color
         cell.titleLabel.text = data[indexPath.row].store
         
         // Setting the time
@@ -101,7 +102,23 @@ class ExpenditureViewController: UIViewController, UITableViewDataSource, UITabl
                 detectedText += "\n"
             }
             self.textRecognitionRequest.recognitionLevel = .accurate
-            print(detectedText)
+            
+            DispatchQueue.main.async {
+                // Translate to UI
+                let extractedData = extractReceiptInformation(with: detectedText)
+                
+                print(extractedData)
+                var previousData = ExpenditureClass.loadFromFile() ?? []
+                
+                previousData.append(ExpenditureClass(amount: extractedData.total, isSpending: true, store: extractedData.store, inputDate: Date()))
+                
+                print(previousData)
+                
+                ExpenditureClass.saveToFile(expenditures: previousData)
+                
+                self.tableView.reloadData()
+                
+            }
         }
         // Improving on the results of the scanned text
         textRecognitionRequest.usesLanguageCorrection = true

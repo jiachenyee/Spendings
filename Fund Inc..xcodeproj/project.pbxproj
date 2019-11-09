@@ -63,6 +63,7 @@
 		3272622C2331A3100058D1AA /* SpendingsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3272622B2331A3100058D1AA /* SpendingsTableViewCell.swift */; };
 		327CBBD623631E6400778914 /* Summary.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 327CBBD523631E6400778914 /* Summary.storyboard */; };
 		327CBBD92363246100778914 /* SummaryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 327CBBD82363246100778914 /* SummaryViewController.swift */; };
+		32A27F6823745A0400E96823 /* FilteringData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32A27F6723745A0400E96823 /* FilteringData.swift */; };
 		32D0C804234DA15400185EE2 /* PopUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32D0C803234DA15400185EE2 /* PopUpView.swift */; };
 		32D0C806234DABF800185EE2 /* PopUpViewUI.xib in Resources */ = {isa = PBXBuildFile; fileRef = 32D0C805234DABF800185EE2 /* PopUpViewUI.xib */; };
 		32E0924F232BED38000F6099 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32E0924E232BED38000F6099 /* AppDelegate.swift */; };
@@ -130,6 +131,7 @@
 		3272622B2331A3100058D1AA /* SpendingsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpendingsTableViewCell.swift; sourceTree = "<group>"; };
 		327CBBD523631E6400778914 /* Summary.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Summary.storyboard; sourceTree = "<group>"; };
 		327CBBD82363246100778914 /* SummaryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SummaryViewController.swift; sourceTree = "<group>"; };
+		32A27F6723745A0400E96823 /* FilteringData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilteringData.swift; sourceTree = "<group>"; };
 		32D0C803234DA15400185EE2 /* PopUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopUpView.swift; sourceTree = "<group>"; };
 		32D0C805234DABF800185EE2 /* PopUpViewUI.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PopUpViewUI.xib; sourceTree = "<group>"; };
 		32E0924B232BED38000F6099 /* Fund Inc..app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Fund Inc..app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -221,6 +223,7 @@
 			isa = PBXGroup;
 			children = (
 				3256DF8A234DD11100CBDE38 /* Expenditure.swift */,
+				32A27F6723745A0400E96823 /* FilteringData.swift */,
 			);
 			path = Persistency;
 			sourceTree = "<group>";
@@ -412,6 +415,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				32D0C804234DA15400185EE2 /* PopUpView.swift in Sources */,
+				32A27F6823745A0400E96823 /* FilteringData.swift in Sources */,
 				3256DF87234DAF6000CBDE38 /* PopUpViewUI.swift in Sources */,
 				3256DF8B234DD11100CBDE38 /* Expenditure.swift in Sources */,
 				32279131232D313100E089E4 /* CustomSelectionButtonsView.swift in Sources */,
